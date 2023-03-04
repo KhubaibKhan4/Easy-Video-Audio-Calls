@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CallsActivity">
+
+    <ImageView
+        android:id="@+id/logocalls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/hey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logocalls"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:text="Hey Let's Call Now"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/heyuserid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hey"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Hey UserID"
+        android:textAllCaps="true"
+        android:textColor="#009688"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heyuserid"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:hint="Enter UserId"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/UserId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+        android:layout_width="48dp"
+        android:id="@+id/audio_view"
+        android:layout_height="48dp"
+        android:layout_below="@+id/txtInputLayout"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginBottom="210dp"
+        />
+    <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+        android:layout_width="48dp"
+        android:id="@+id/video_view"
+        android:layout_height="48dp"
+        android:layout_below="@+id/txtInputLayout"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="240dp"
+        />
+
+</RelativeLayout>
